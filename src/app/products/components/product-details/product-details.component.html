@@ -1,1 +1,35 @@
-<p>product-details works!</p>
+<div class="product-details-main">
+  <button routerLink="/products">Back To Catalog</button>
+
+  @if(product$ | async; as product) {
+  <div class="product-details-card">
+    <div class="image-container">
+      <img [src]="product.image" />
+    </div>
+    <h1>{{ product.title }}</h1>
+    <span>{{ product.category }}</span>
+    <h2>Product Description</h2>
+    <span>{{ product.description }}</span>
+    <div class="product-settings">
+      <div class="rate-section">
+        <lucide-icon [img]="StarIcon" [size]="24" color="gold"></lucide-icon>
+        <div>
+          <span>Rating</span>
+          <span>{{ product.rating.rate }}</span>
+        </div>
+      </div>
+      <div class="count-section">
+        <lucide-icon [img]="BoxIcon" [size]="24" color="blue"></lucide-icon>
+        <div>
+          <span>Remaining</span>
+          <span>{{ product.rating.count }}</span>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <h2>{{ product.price | currency : "USD" }}</h2>
+  </div>
+  } @else {
+  <div>Loading...</div>
+  }
+</div>

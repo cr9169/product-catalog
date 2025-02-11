@@ -1,9 +1,8 @@
 <div class="products-list">
-  @if (products$ | async; as products) {
-    @for (product of products; track product.id) {
-      <app-product-card [product]="product"></app-product-card>
-    }
-  } @else {
-    <div>Loading...</div>
+  @if (products$ | async; as products) { @for (product of products; track
+  product.id) {
+  <app-product-card [product]="product"></app-product-card>
+  } } @else {
+  <div>Loading...</div>
   }
 </div>

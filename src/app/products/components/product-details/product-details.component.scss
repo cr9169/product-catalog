@@ -1,0 +1,84 @@
+:host {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+}
+
+.product-details-main {
+  width: 80%;
+  border: solid 0.1rem rgb(187, 187, 187);
+  border-radius: 1rem;
+  background-color: white;
+
+  > button {
+    margin: 2rem 0 0 2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: rgb(36, 36, 36);
+  }
+
+  > button:hover {
+    background-color: rgb(224, 224, 224);
+  }
+
+  .product-details-card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    > h1,
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    > span {
+      margin-bottom: 3rem;
+    }
+
+    .image-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 5rem;
+      > img {
+        width: 15rem;
+        aspect-ratio: 1;
+      }
+    }
+
+    .product-settings {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      .rate-section,
+      .count-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+
+          > span:nth-child(1) {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    > hr {
+      margin-block: 1rem;
+    }
+  }
+}

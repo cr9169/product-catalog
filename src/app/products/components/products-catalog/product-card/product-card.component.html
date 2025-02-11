@@ -3,7 +3,7 @@
   <h2>{{ product.title }}</h2>
   <span>{{ product.category }}</span>
   <div>
-    <a [routerLink]="['/product', product.id]">More Details</a>
+    <a [routerLink]="['/products', product.id]">More Details</a>
     <h2>{{ product.price | currency : "USD" }}</h2>
   </div>
 </div>
