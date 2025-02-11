@@ -1,1 +1,12 @@
-<p>products-filter works!</p>
+<div class="select-container">
+  <select
+    class="custom-select"
+    [(ngModel)]="selectedCategory"
+    (ngModelChange)="onSelectCategory()"
+  >
+    <option value="">All Categories</option>
+    @for(category of uniqueCategories; track category) {
+    <option [value]="category">{{ category }}</option>
+    }
+  </select>
+</div>

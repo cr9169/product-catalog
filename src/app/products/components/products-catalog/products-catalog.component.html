@@ -1,8 +1,16 @@
+<h1>Products Catalog</h1>
+@if (products) {
+<app-products-filter
+  [products]="products"
+  (categorySelected)="filterProducts($event)"
+>
+</app-products-filter>
+
 <div class="products-list">
-  @if (products$ | async; as products) { @for (product of products; track
-  product.id) {
+  @for (product of filteredProducts; track product.id) {
   <app-product-card [product]="product"></app-product-card>
-  } } @else {
-  <div>Loading...</div>
   }
 </div>
+} @else {
+<div>Loading...</div>
+}
