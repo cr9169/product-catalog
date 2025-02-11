@@ -1,1 +1,9 @@
-<p>product-card works!</p>
+<div>
+  <img [src]="product.image" />
+  <h2>{{ product.title }}</h2>
+  <span>{{ product.category }}</span>
+  <div>
+    <a [routerLink]="['/product', product.id]">More Details</a>
+    <h2>{{ product.price | currency : "USD" }}</h2>
+  </div>
+</div>

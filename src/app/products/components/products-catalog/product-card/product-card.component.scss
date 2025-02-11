@@ -1,0 +1,39 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > div {
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: antiquewhite;
+    border: solid 0.1rem rgb(224, 223, 223);
+    border-radius: 1rem;
+    padding: 2rem;
+
+    > img {
+      width: 10rem;
+      aspect-ratio: 1;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    > div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      > a {
+        text-decoration: none;
+        color: rgb(68, 68, 255);
+      }
+    }
+  }
+}
